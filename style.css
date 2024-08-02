@@ -39,7 +39,7 @@ p{
 #in2,#in3,#in4{
     transform: translateY(7px);
 }
-#backAll #form input[type=text],#form2 input[type=text]{
+#backAll #form input[type=text],input[type=password],#form2 input[type=text]{
 width: 300px;
 text-align: left;
 color: rgb(77, 75, 75);
