@@ -1,0 +1,150 @@
+body{
+    background-color: rgb(252, 253, 253);
+width: 360px;
+}
+#backAll{
+    position: fixed;
+}
+
+#backAll #form,#form2{
+    border: 1px solid rgb(173, 173, 173);
+    background-color: transparent;
+    height: 550px;
+    border-radius: 2px;
+    width: 350px;
+    transform: translateX(5px);
+    position: fixed;
+}
+#ig-logo{
+    font-size: 50px;
+    position: fixed;
+    transform: translate(60px,30px);
+   
+}
+p{
+    color: rgb(17, 17, 17);
+    font-style: italic;
+    
+    
+}
+#ins{
+    position: fixed;
+    transform: translate(20px,200px);
+    
+}
+#nep{
+    transform: translateY(15px);
+    position: fixed;
+}
+#in2,#in3,#in4{
+    transform: translateY(7px);
+}
+#backAll #form input[type=text],#form2 input[type=text]{
+width: 300px;
+text-align: left;
+color: rgb(77, 75, 75);
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+border: 1px solid rgb(187, 187, 187);
+background-color: rgb(241, 241, 241);
+height: 44px;
+}
+#backAll #form input[type=text]:focus{
+    outline: 1px solid rgb(10, 119, 192);
+}
+#form2 input[type=text]:focus{
+    outline: 1px solid rgb(10, 119, 192);
+}
+#btn-logIn2{
+    transform: translateY(55px);
+}
+#button {
+    transform: translateY(15px);
+}
+button{
+border: none;
+background-color: rgb(10, 119, 192);
+    width: 305px;
+    height: 44px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    border-radius: 4px;
+
+}
+#or{
+    
+    transform: translate(135px,-20px);
+    width: 30px;
+    color: rgb(77, 75, 75);
+
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+}
+hr{
+    position: relative;
+}
+#fb-log{
+    display: flex;
+    transform: translateX(60px);
+}
+h4{
+    color: rgb(8, 82, 151);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h5{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: fixed;
+transform: translate(80px);
+    color: rgb(38, 38, 63);
+}
+#btn-load{
+    border: none;
+    display: none;
+    background-color: rgb(105, 172, 216);
+        width: 305px;
+        height: 44px;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: aliceblue;
+        border-radius: 4px;
+}
+#loading{
+    background-color: transparent;
+    border: 6px solid rgb(228, 228, 228);
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    border-radius: 50%;
+    border-top:  7px solid  rgb(105, 172, 216);
+    /* transform: translateX(0px); */
+    animation: load 0.8s  infinite;
+    margin-left: 135px;
+
+}
+@keyframes load {
+  
+    100%{
+      transform: rotate(360deg);
+    }
+}
+#message{
+    background-color: transparent;
+    border: 1px solid rgb(240, 60, 60);
+    width: 280px;
+    position: fixed;
+    display: none;
+    transform: translate(30px,150px);
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    color: rgb(240, 60, 60);
+}
+#form2{
+    display: none;
+}
+#back{
+    color: rgb(17, 31, 41);
+    transform: translate(100px,30px);
+}

